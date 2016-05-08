@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My contacts</string>
+    <integer name="com_vk_sdk_AppId">5429657</integer>
+    <string name="showMsg">Показать сообщение</string>
+</resources>
