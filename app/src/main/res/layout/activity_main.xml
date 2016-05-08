@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:id="@+id/lV_vk"
         android:layout_above="@+id/signInVk"/>
-
+     
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
