@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -32,9 +33,11 @@ public class MainActivity extends AppCompatActivity {
 */
 
     public String[] scope = new String[]{VKScope.FRIENDS, VKScope.MESSAGES, VKScope.PHOTOS};
-    private ListView lV_vk;
+    private ListView lV_vk,LV_contac;
     private Button signInVk, buttonContacts;
     private ImageView imageView,imageView2;
+    private FrameLayout frag;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +48,11 @@ public class MainActivity extends AppCompatActivity {
         imageView2 = (ImageView)findViewById(R.id.imageView2);
         buttonContacts = (Button) findViewById(R.id.buttonContacts);
         lV_vk = (ListView) findViewById(R.id.lV_vk);
+        LV_contac =(ListView) findViewById(R.id.LV_contac);
+        frag = (FrameLayout) findViewById(R.id.frag);
         signInVk = (Button)findViewById(R.id.signInVk);
+
+
         signInVk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 lV_vk.setVisibility(View.VISIBLE);
                 imageView.setVisibility(View.VISIBLE);
                 imageView2.setVisibility(View.INVISIBLE);
+                frag.setVisibility(View.INVISIBLE);
+                LV_contac.setVisibility(View.INVISIBLE);
             }
         });
         buttonContacts.setOnClickListener(new View.OnClickListener() {
@@ -61,9 +70,10 @@ public class MainActivity extends AppCompatActivity {
                 lV_vk.setVisibility(View.INVISIBLE);
                 imageView.setVisibility(View.INVISIBLE);
                 imageView2.setVisibility(View.VISIBLE);
+                frag.setVisibility(View.VISIBLE);
+                LV_contac.setVisibility(View.VISIBLE);
             }
         });
-
 
 
 
