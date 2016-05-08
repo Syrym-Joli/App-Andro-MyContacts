@@ -9,7 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/lV_vk"
-        android:layout_above="@+id/signInVk" />
+        android:layout_above="@+id/signInVk"
+        android:visibility="invisible"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -74,6 +75,6 @@
         android:layout_below="@+id/frag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/LV_contac"
+        android:id="@+id/lV_contac"
         android:visibility="invisible"></ListView>
 </RelativeLayout>
