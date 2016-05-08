@@ -9,13 +9,38 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/lV_vk"
-        android:layout_above="@+id/signInVk"/>
-     
+        android:layout_above="@+id/signInVk" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Vk вход"
-        android:id="@+id/signInVk"
+        android:text="Вконтакте"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:id="@+id/signInVk" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="контакты"
+        android:id="@+id/buttonContacts"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/lV_vk"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/vk"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_below="@+id/lV_vk"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/contacts_144x144" />
 </RelativeLayout>

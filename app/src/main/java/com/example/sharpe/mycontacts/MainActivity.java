@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -32,21 +33,38 @@ public class MainActivity extends AppCompatActivity {
 
     public String[] scope = new String[]{VKScope.FRIENDS, VKScope.MESSAGES, VKScope.PHOTOS};
     private ListView lV_vk;
-    private Button signInVk;
+    private Button signInVk, buttonContacts;
+    private ImageView imageView,imageView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        imageView = (ImageView)findViewById(R.id.imageView);
+        imageView2 = (ImageView)findViewById(R.id.imageView2);
+        buttonContacts = (Button) findViewById(R.id.buttonContacts);
         lV_vk = (ListView) findViewById(R.id.lV_vk);
         signInVk = (Button)findViewById(R.id.signInVk);
         signInVk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 VKSdk.login(MainActivity.this, scope);
+                lV_vk.setVisibility(View.VISIBLE);
+                imageView.setVisibility(View.VISIBLE);
+                imageView2.setVisibility(View.INVISIBLE);
             }
         });
+        buttonContacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lV_vk.setVisibility(View.INVISIBLE);
+                imageView.setVisibility(View.INVISIBLE);
+                imageView2.setVisibility(View.VISIBLE);
+            }
+        });
+
+
 
 
 
