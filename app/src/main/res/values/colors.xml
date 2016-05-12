@@ -5,6 +5,8 @@
     <color name="colorAccent">#FAFAFA</color>
     <color name="call">#FF33B5E5</color>
     <color name="info">#1565C0</color>
+    <color name="red">#D50000</color>
+    <color name="yell">#FFC107</color>
 
 
 </resources>

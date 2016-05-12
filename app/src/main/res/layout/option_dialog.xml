@@ -1,74 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="5dp"
-    android:orientation="horizontal"
-    android:baselineAligned="false">
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_weight="1" >
-        <ImageButton
-            android:id="@+id/dialog_call"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@color/call"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/call_text"
-            android:src="@drawable/ic_action_call"
-            android:layout_marginTop="50dp"/>
-        <TextView
+    android:baselineAligned="false"
+    android:background="#ffffff">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/dialog_call"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/call"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/call_text"
+                android:src="@drawable/ic_action_call"
+                android:layout_marginTop="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/dialog_call"
+                android:text="@string/call_text"
+                android:layout_marginBottom="50dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/dialog_view"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/info"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/view_text"
+                android:src="@drawable/ic_account_circle_white_24dp"
+                android:layout_marginTop="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/dialog_view"
+                android:text="@string/view_text"
+                android:layout_marginBottom="50dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageButton
+                android:id="@+id/dialog_sms"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#9bc703"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/sms_text"
+                android:src="@drawable/ic_textsms_white_24dp"
+                android:layout_marginTop="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/dialog_sms"
+                android:text="@string/sms_text"
+                android:layout_marginBottom="50dp"/>
+        </RelativeLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@color/yell"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/edit_text"
+                    android:src="@drawable/ic_border_color_white_24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/imageButton"
+                    android:text="@string/edit_text"
+                    android:layout_marginBottom="50dp" />
+            </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_column="1">
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/call"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/call_text"
+                android:src="@drawable/ic_add_white_24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/imageButton2"
+                android:text="@string/add_text"
+                android:layout_marginBottom="25dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/dialog_call"
-            android:text="@string/call_text"
-            android:layout_marginBottom="50dp"/>
-    </RelativeLayout>
+            android:layout_weight="1" >
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_weight="1" >
-        <ImageButton
-            android:id="@+id/dialog_view"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="@color/info"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/view_text"
-            android:src="@drawable/ic_action_person"
-            android:layout_marginTop="50dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/dialog_view"
-            android:text="@string/view_text"
-            android:layout_marginBottom="50dp"/>
-    </RelativeLayout>
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@color/red"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/del_text"
+                android:src="@drawable/ic_delete_white_24dp" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:layout_weight="1" >
-        <ImageButton
-            android:id="@+id/dialog_sms"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:background="#9bc703"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/sms_text"
-            android:src="@drawable/ic_action_chat"
-            android:layout_marginTop="50dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/dialog_sms"
-            android:text="@string/sms_text"
-            android:layout_marginBottom="50dp"/>
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/imageButton3"
+                android:text="@string/del_text"
+                android:layout_marginBottom="50dp" />
+        </RelativeLayout>
+    </TableRow>
 
-</LinearLayout>
+</TableLayout>

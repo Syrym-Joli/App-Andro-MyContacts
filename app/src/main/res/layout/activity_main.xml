@@ -47,7 +47,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:id="@+id/frag">
 
         <TextView
@@ -60,7 +60,7 @@
             android:layout_gravity="center" />
 
         <SearchView
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/colorPrimary"
             android:padding="8dp"
             android:id="@+id/searchView"
             android:drawableLeft="@android:drawable/ic_menu_search"

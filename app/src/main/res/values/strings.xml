@@ -6,4 +6,9 @@
     <string name="call_text">Позвонить</string>
     <string name="view_text">Инфо</string>
     <string name="sms_text">Написать смс</string>
+
+    <string name="del_text">Удалить</string>
+    <string name="add_text">Добавить</string>
+    <string name="edit_text">Изменить</string>
+
 </resources>
