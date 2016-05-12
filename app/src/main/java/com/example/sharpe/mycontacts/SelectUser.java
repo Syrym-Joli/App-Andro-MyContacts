@@ -2,7 +2,6 @@ package com.example.sharpe.mycontacts;
 
 import android.graphics.Bitmap;
 
-
 public class SelectUser {
     String name;
 

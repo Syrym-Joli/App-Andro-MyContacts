@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -55,7 +54,7 @@ public class SelectUserAdapter extends BaseAdapter {
         View view = convertView;
         if (view == null) {
             LayoutInflater li = (LayoutInflater) _c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = li.inflate(R.layout.contac, null);
+            view = li.inflate(R.layout.contact_info, null);
             Log.e("Inside", "here--------------------------- In view1");
         } else {
             view = convertView;
@@ -65,13 +64,12 @@ public class SelectUserAdapter extends BaseAdapter {
         v = new ViewHolder();
 
         v.title = (TextView) view.findViewById(R.id.name);
-        //v.check = (CheckBox) view.findViewById(R.id.check);
+
         v.phone = (TextView) view.findViewById(R.id.no);
         v.imageView = (ImageView) view.findViewById(R.id.pic);
 
         final SelectUser data = (SelectUser) _data.get(i);
         v.title.setText(data.getName());
-        v.check.setChecked(data.getCheckedBox());
         v.phone.setText(data.getPhone());
 
         // Set image if exists
@@ -82,7 +80,6 @@ public class SelectUserAdapter extends BaseAdapter {
             } else {
                 v.imageView.setImageResource(R.drawable.account108x108);
             }
-            // Seting round image
             Bitmap bm = BitmapFactory.decodeResource(view.getResources(), R.drawable.account108x108); // Load default image
             roundedImage = new RoundImage(bm);
             v.imageView.setImageDrawable(roundedImage);
@@ -93,25 +90,10 @@ public class SelectUserAdapter extends BaseAdapter {
         }
 
         Log.e("Image Thumb", "--------------" + data.getThumb());
-
-        /*// Set check box listener android
-        v.check.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CheckBox checkBox = (CheckBox) view;
-                if (checkBox.isChecked()) {
-                    data.setCheckedBox(true);
-                  } else {
-                    data.setCheckedBox(false);
-                }
-            }
-        });*/
-
         view.setTag(data);
         return view;
     }
 
-    // Filter Class
     public void filter(String charText) {
         charText = charText.toLowerCase(Locale.getDefault());
         _data.clear();
@@ -130,6 +112,5 @@ public class SelectUserAdapter extends BaseAdapter {
     static class ViewHolder {
         ImageView imageView;
         TextView title, phone;
-        CheckBox check;
     }
 }
