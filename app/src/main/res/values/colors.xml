@@ -3,4 +3,8 @@
     <color name="colorPrimary">#1E88E5</color>
     <color name="colorPrimaryDark">#1565C0</color>
     <color name="colorAccent">#FAFAFA</color>
+    <color name="call">#FF33B5E5</color>
+    <color name="info">#1565C0</color>
+
+
 </resources>
